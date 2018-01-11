@@ -1,0 +1,58 @@
+windSim Input File. 
+author: Iván Huergo
+Simulaciones de viento turbulento para edificios altos
+----------------------------------------------------------------------
+------------        Opciones de definición del tiempo   --------------
+----------------------------------------------------------------------
+fs	20				        Frecuencia de muestreo (Hz)
+Duration	600				Duración de las series (s)
+----------------------------------------------------------------------
+------------     Turbulent Wind data Options    ----------------------
+----------------------------------------------------------------------
+stdU	12.4424						Desviación estándar en la altura de referencia para la componente longitudinal del viento (m/s)
+stdV	9.3318						Desviación estándar en la altura de referencia para la componente transversal del viento (m/s)
+stdW	6.2212						Desviación estándar en la altura de referencia para la componente vertical del viento ( m/s)
+Lux	40.3117					        Longitud de escala para la componente longitudinal en la altura de referencia- dirección longitudinal del viento
+Lvx	12.0935					        Longitud de escala para la componente transversal en la altura de referencia- dirección longitudinal del viento
+Lwx	8.0623						Longitud de escala para la componente vertical en la altura de referencia- dirección longitudinal del viento
+Cuy_1	7						Coeficiente de decaimiento de coherencia lateral para la componente longitudinal del viento
+Cuz_1	10						Coeficiente de decaimiento de coherencia vertical para la componente longitudinal del viento
+Cvy_1	7						Coeficiente de decaimiento de coherencia lateral para la componente transversal del viento
+Cvz_1	10						Coeficiente de decaimiento de coherencia vertical para la componente transversal del viento
+Cwy_1	7						Coeficiente de decaimiento de coherencia lateral para la componente vertical del viento
+Cwz_1	10						Coeficiente de decaimiento de coherencia vertical para la componente vertical del viento
+
+----------------------------------------------------------------------
+------------        Perfil de velocidades medias   -------------------
+----------------------------------------------------------------------
+
+type:	Von Karman			Espectro de densidad de potencia: escoger entre 'Von Karman' o 'Kaimal''
+profile:	power			Perfil de velocidad media: escoger entre 'power' or 'log'
+
+meanU	30				Velocidad media del viento en la altura de referencia
+zr	10				Altura de referencia
+a	0.24				Coeficiente de la ley de potencia
+u_star	5.2115 				Velocidad de fricción en la altura de referencia (m/s)
+roughness	1		        Coeficiente de rugosidad del lugar
+----------------------------------------------------------------------
+------------        Opciones de generación de cuadrícula   -----------
+----------------------------------------------------------------------
+Nyy	1						Número de nodos a lo largo del eje y
+Nzz	10					        Número de nodos a lo largo del eje z
+Zmin	10						Altura mínima para el eje z (m/s)
+Zmax	152						Altura máxima para el eje z (m/s)
+Ymin	0						Longitud mínima para el eje y (m/s)
+Ymax	0					        Longitud máxima para el eje y (m/s)
+----------------------------------------------------------------------
+----------------------------------------------------------------------
+	z-axe (vertical)
+	^	 Nyy
+	| - - - - - |
+	| + + + + + |
+	| + + + + + | Nzz
+	| + + + + + |
+	| + + + + + |
+	 - - - - - - -> y-axe (horizontal)
+----------------------------------------------------------------------
+NOTE : Do not add or remove any lines in this file!
+----------------------------------------------------------------------
